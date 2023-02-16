@@ -61,6 +61,13 @@ namespace CalculatorTests.Steps
             {
                 _numberOfSolutions = 2;
             }
+            else if(_delta < 0) { 
+                _numberOfSolutions= 0;
+            }
+            else if (_delta == 0)
+            {
+                _numberOfSolutions = 1;
+            }
 
             Assert.AreEqual(expectedNumberOfSolutions, _numberOfSolutions, "Number of real number solutions is different than expected.");
         }

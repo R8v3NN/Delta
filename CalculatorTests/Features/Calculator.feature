@@ -16,10 +16,15 @@ Examples:
 | 50 | 70  | -20    |
 | 90 | -10 | 100    |
 
-Scenario: Delta
-	When I calculate delta from 2,2,-3 as coefficients of the quadratic equation
-	Then the equation has 2 real number solutions
 
+Scenario: Delta
+	When I calculate delta from <x>,<y>,<z> as coefficients of the quadratic equation
+	Then the equation has <result> real number solutions
+	Examples: 
+	| x  | y   |  z  | result |
+	| 2  | 2   | -5  |    2   |
+	| 2  | 4   |  2  |    1   |
+	| 5  | 4   |  5  |    0   |
 
 
 
